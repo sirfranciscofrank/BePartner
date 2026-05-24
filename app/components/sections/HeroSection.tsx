@@ -1,3 +1,4 @@
+import Link from "next/link"
 import ProductShowcase from "../ui/ProductShowcase"
 
 export default function HeroSection() {
@@ -54,12 +55,18 @@ export default function HeroSection() {
 
                     {/* CTAs */}
                     <div className="mt-7 flex flex-wrap gap-3">
-                        <button className="rounded-xl bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-white shadow-[0_8px_28px_rgba(253,109,7,0.38)] transition hover:bg-[var(--color-accent-hover)] hover:shadow-[0_12px_36px_rgba(253,109,7,0.50)]">
+                        <Link
+                            href="/register"
+                            className="rounded-xl bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-white shadow-[0_8px_28px_rgba(253,109,7,0.38)] transition hover:bg-[var(--color-accent-hover)] hover:shadow-[0_12px_36px_rgba(253,109,7,0.50)]"
+                        >
                             Create Business Profile
-                        </button>
-                        <button className="rounded-xl border border-white/25 bg-white/[0.08] px-6 py-3 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/[0.15] hover:border-white/40">
+                        </Link>
+                        <a
+                            href="#how-it-works"
+                            className="rounded-xl border border-white/25 bg-white/[0.08] px-6 py-3 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/[0.15] hover:border-white/40"
+                        >
                             See How It Works
-                        </button>
+                        </a>
                     </div>
 
                     {/* Social proof */}

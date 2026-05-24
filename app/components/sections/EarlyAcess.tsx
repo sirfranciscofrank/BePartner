@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function EarlyAccessCTA() {
   return (
     <section id="early-access" className="scroll-mt-20 bg-[var(--color-surface)] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
@@ -22,12 +24,12 @@ export default function EarlyAccessCTA() {
             <div className="mt-8 flex justify-center">
               <div className="relative">
                 <div className="pointer-events-none absolute -inset-3 rounded-2xl bg-[var(--color-accent)] opacity-30 blur-xl" />
-                <button
-                  type="button"
+                <Link
+                  href="/register"
                   className="relative min-h-12 rounded-xl bg-[var(--color-accent)] px-7 py-3.5 text-base font-bold text-[var(--color-white)] shadow-[0_18px_40px_rgba(0,0,0,0.28)] transition duration-150 hover:-translate-y-0.5 hover:bg-[var(--color-accent-hover)] hover:shadow-[0_22px_48px_rgba(0,0,0,0.34)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-primary)] sm:px-9"
                 >
                   Create Your Free Profile
-                </button>
+                </Link>
               </div>
             </div>
 
