@@ -34,14 +34,14 @@ export default function AuthLayout({ visualPanel, formCard }: AuthLayoutProps) {
 
       {/* Left panel — desktop only, dark gradient */}
       <div
-        className="hidden lg:flex w-1/2 flex-col items-center justify-center px-12 py-20"
+        className="hidden lg:flex w-1/2 flex-col items-center justify-center px-16 py-20"
         style={{ background: "linear-gradient(160deg, #071A3D 0%, #0B255A 60%, #1E3A8A 100%)" }}
       >
         {visualPanel}
       </div>
 
       {/* Right panel — full width on mobile, half on desktop */}
-      <div className="flex w-full lg:w-1/2 flex-col items-center justify-center bg-(--color-surface) px-4 py-16">
+      <div className="flex w-full lg:w-1/2 flex-col bg-(--color-surface)">
         {formCard}
       </div>
 

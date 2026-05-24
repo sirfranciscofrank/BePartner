@@ -9,7 +9,6 @@ export default function LoginPage() {
         <AuthVisualPanel
           heading="Continue your business matching."
           subtext="Manage your business profile, review matches, and respond to connection requests."
-          showPreviewCard={false}
         />
       }
       formCard={

@@ -1,23 +1,20 @@
 import Image from "next/image"
 import Link from "next/link"
 import logo from "../../assets/images/logo-primary.png"
-import AuthPreviewCard from "./AuthPreviewCard"
 
 type AuthVisualPanelProps = {
   heading: string
   subtext: string
   bullets?: string[]
-  showPreviewCard: boolean
 }
 
 export default function AuthVisualPanel({
   heading,
   subtext,
   bullets,
-  showPreviewCard,
 }: AuthVisualPanelProps) {
   return (
-    <div className="flex flex-col items-center text-center max-w-sm w-full space-y-5">
+    <div className="flex w-full max-w-xl flex-col items-start text-left space-y-9">
 
       {/* Logo */}
       <Link
@@ -27,24 +24,24 @@ export default function AuthVisualPanel({
         <Image
           src={logo}
           alt="BePartner Logo"
-          className="h-9 w-9 object-contain"
+          className="h-11 w-11 object-contain"
           priority
         />
-        <span className="text-[17px] font-bold tracking-tight text-white">
+        <span className="text-xl font-bold tracking-tight text-white">
           BePartner
         </span>
       </Link>
 
-      <h2 className="text-3xl font-semibold leading-snug tracking-tight text-white">
+      <h2 className="max-w-xl text-4xl font-semibold leading-tight tracking-tight text-white xl:text-5xl">
         {heading}
       </h2>
 
       {bullets ? (
-        <ul className="space-y-2 text-left w-full">
+        <ul className="w-full max-w-lg space-y-4">
           {bullets.map((bullet, i) => (
-            <li key={i} className="flex items-start gap-2.5 text-sm text-white/70">
-              <span className="mt-0.5 h-4 w-4 shrink-0 flex items-center justify-center rounded-full bg-(--color-accent)/20 text-(--color-accent)">
-                <svg width="9" height="7" viewBox="0 0 9 7" fill="none" aria-hidden="true">
+            <li key={i} className="flex items-start gap-3 text-base leading-relaxed text-white/75">
+              <span className="mt-1 h-5 w-5 shrink-0 flex items-center justify-center rounded-full bg-(--color-accent)/20 text-(--color-accent)">
+                <svg width="10" height="8" viewBox="0 0 9 7" fill="none" aria-hidden="true">
                   <path d="M1 3.5l2.5 2.5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
@@ -54,12 +51,6 @@ export default function AuthVisualPanel({
         </ul>
       ) : (
         <p className="text-sm leading-relaxed text-white/70">{subtext}</p>
-      )}
-
-      {showPreviewCard && (
-        <div className="w-full">
-          <AuthPreviewCard />
-        </div>
       )}
 
     </div>

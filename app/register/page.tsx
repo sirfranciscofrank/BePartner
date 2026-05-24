@@ -14,7 +14,6 @@ export default function RegisterPage() {
             "Get matched by industry, location, and tags",
             "Connect only when both sides accept",
           ]}
-          showPreviewCard={true}
         />
       }
       formCard={
@@ -29,10 +28,27 @@ export default function RegisterPage() {
 
             <div>
               <label
+                htmlFor="businessName"
+                className="block text-xs font-medium text-(--color-body) mb-1"
+              >
+                Business Name
+              </label>
+              <input
+                id="businessName"
+                name="businessName"
+                type="text"
+                autoComplete="organization"
+                placeholder="Your company name"
+                className="w-full px-3 py-2 rounded-md border border-(--color-border) bg-(--color-surface) text-sm focus:outline-none focus:border-(--color-brand-light)"
+              />
+            </div>
+
+            <div>
+              <label
                 htmlFor="email"
                 className="block text-xs font-medium text-(--color-body) mb-1"
               >
-                Email
+                Business Email
               </label>
               <input
                 id="email"
